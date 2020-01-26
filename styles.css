@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.darkmode {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+#header {
+  position: absolute;
+  height: 10vh;
+  width: 100vw;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(
+    to bottom,
+    rgba(226, 226, 226, 0.7) 0%,
+    rgba(219, 219, 219, 0.7) 50%,
+    rgba(209, 209, 209, 0.7) 51%,
+    rgba(254, 254, 254, 0.7) 100%
+  );
+  align-items: center;
+  padding: 3vh 10vw;
+}
+#header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#header .logo h2 {
+  padding: 2vh 1vw;
+}
+
+footer {
+  height: 15vh;
+  width: 100vw;
+  bottom: 0;
+  position: absolute;
+  background: linear-gradient(
+    to bottom,
+    rgba(226, 226, 226, 1) 0%,
+    rgba(209, 209, 209, 1) 51%,
+    rgba(254, 254, 254, 1) 100%
+  );
+  padding: 3vh 10vw;
+  display: flex;
+  justify-content: space-around;
+}
+
+footer h2 {
+  margin-bottom: 5%;
+}
+
+.social a {
+  padding: 1vw;
+  text-decoration: none;
+  color: black;
+  font-size: 3vh;
+}
+.enlaces ul {
+  list-style: none;
+}
+.enlaces ul li a {
+  list-style-type: none;
+  text-decoration: none;
+  color: black;
+  font-size: 1.7vh;
+  margin-left: 20%;
+}
+
+.social a:hover,
+.enlaces a:hover {
+  filter: invert(50%);
+}
+
+.coche {
+  /* height: 55vh; */
+  width: 65vw;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translate(-5%, -50%);
+}
+
+.s1 {
+  background-image: url('./img/class_light.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.s1dark {
+  background-image: url('./img/class_dark.png');
+  background-size: cover;
+  background-position: center;
+}
+.s2 {
+  background: linear-gradient(to left top, #eeeded, #c7c4c4);
+}
+
+.sc2dark {
+  background: linear-gradient(to left top, #141313, #322f30);
+  color: #ffffff;
+}
+
+.s3 {
+  background: linear-gradient(to left top, #eeeded, #c7c4c4);
+}
+
+.mapa {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.mapa h1 {
+  font-size: 5vh;
+  font-family: 'Poppins';
+  background: linear-gradient(
+    to right,
+    rgb(49, 49, 49) 0%,
+    rgba(102, 102, 102, 1) 50%,
+    rgba(28, 28, 28, 1) 100%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.mapa h1:hover {
+  color: black;
+  text-shadow: 0px 0px 40px #ffffff;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.description {
+  margin-left: 70%;
+  width: 30vw;
+}
+
+.description ul {
+  list-style: none;
+}
+
+.description ul li {
+  display: block;
+  float: left;
+  padding: 0.5vw;
+  margin: 20px;
+}
+
+.description ul li img {
+  height: 20%;
+}
+.description ul li img:hover {
+  filter: invert(30%);
+}
+
+.description h1 {
+  margin: 3%;
+  font-size: 3vh;
+  font-family: 'Poppins', sans-serif;
+}
+.description p {
+  width: 29vw;
+  margin: 20px 5px;
+  font-family: 'Montserrat';
+  font-size: 20px;
+}
+.logo img {
+  height: 5vh;
+}
+
+/* BOTON */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: black;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px black;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
